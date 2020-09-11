@@ -1,12 +1,15 @@
 import React, { FormEvent, useState } from 'react'
 import { Flex, Text, Button } from '@chakra-ui/core'
 import Input from '../components/Input'
+import axios from 'axios'
 
 export default function Home() {
   const [email, setEmail] = useState('')
 
-  function handleSignUpToNewsletter() {
+  function handleSignUpToNewsletter(event: FormEvent) {
+    event.preventDefault()
 
+    axios.post('/api/subscribe')
   }
 
   return (
