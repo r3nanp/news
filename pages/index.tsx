@@ -9,7 +9,7 @@ export default function Home() {
   function handleSignUpToNewsletter(event: FormEvent) {
     event.preventDefault()
 
-    axios.post('/api/subscribe')
+    axios.post('/api/subscribe', { email })
   }
 
   return (
@@ -41,7 +41,7 @@ export default function Home() {
           placeholder="Seu melhor e-mail"
           marginTop={2}
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={event => setEmail(event.target.value)}
         />
 
         <Button
