@@ -22,3 +22,5 @@ const ThemeContainer: React.FC = ({ children }) => {
     </ChakraThemeProvider>
   )
 }
+
+export default ThemeContainer
